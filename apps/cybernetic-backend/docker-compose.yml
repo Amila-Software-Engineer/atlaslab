@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: cybernetic-backend-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cybernetic-backend
+      MYSQL_USER: amila
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data_cybernetic_backend:/var/lib/mysql
+
+volumes:
+  mysql_data_cybernetic_backend:
