@@ -8,6 +8,15 @@
     },
     {
       "path": "./apps/cybernetic-backend"
+    },
+    {
+      "path": "./libs"
+    },
+    {
+      "path": "./libs"
+    },
+    {
+      "path": "./libs"
     }
   ]
 }
