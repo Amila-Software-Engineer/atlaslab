@@ -24,7 +24,7 @@
           "watchDepsName": "watch-deps"
         }
       },
-      "exclude": ["libs/*"]
+      "exclude": ["libs/*", "auth/*", "database/*"]
     },
     {
       "plugin": "@nx/eslint/plugin",
@@ -34,7 +34,7 @@
     },
     {
       "plugin": "@nx/js/typescript",
-      "include": ["libs/*"],
+      "include": ["libs/*", "auth/*", "database/*"],
       "options": {
         "typecheck": {
           "targetName": "typecheck"
@@ -44,6 +44,11 @@
   ],
   "targetDefaults": {
     "@nx/esbuild:esbuild": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "@nx/js:tsc": {
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]

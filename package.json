@@ -7,7 +7,8 @@
   "dependencies": {
     "@prisma/client": "^6.5.0",
     "axios": "^1.6.0",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
@@ -36,6 +37,9 @@
   },
   "workspaces": [
     "apps/*",
-    "libs"
+    "libs",
+    "auth",
+    "database",
+    "dbConnection"
   ]
 }

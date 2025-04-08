@@ -1,11 +1,21 @@
 import express from 'express';
 import appRouter from './routes';
 
+import { mysqlDbConnection } from '@atlaslab/dbConnection'
+
+mysqlDbConnection({
+  host: process.env.HOST || 'localhost',
+  user: process.env.USER || 'amila',
+  password: process.env.PASSWORD || 'password',
+  database: process.env.DATABASE || 'cybernetic-backend',
+});
+
+
+const app = express();
+
 
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
-
-const app = express();
 
 // Middleware 
 app.use(express.json());

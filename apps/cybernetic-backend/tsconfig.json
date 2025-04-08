@@ -4,6 +4,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../dbConnection"
+    },
+    {
       "path": "./tsconfig.app.json"
     }
   ]
